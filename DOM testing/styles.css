@@ -1,0 +1,17 @@
+button {
+    display: block;
+    position: absolute;
+    top: 500px;
+    left: 800px;
+    background-color: chartreuse;
+    font-size: 30px;
+    width: 200px;
+    height: 200px;
+}
+
+p {
+    background-color: burlywood;
+    font-size: 30px;
+    display: inline-block;
+    padding: 5px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <title>BMI Calculator v1</title>
+</head>
+
+<body>
+    <div class="center">
+        <div class="box">
+            <div class="title">
+                <h1>BMI CALCULATOR v1</h1>
+            </div>
+            <div class="content">
+                <p>Enter the following requirements:</p>
+                <ul>
+                    <li>(1) Height in centimeters (cm)</li>
+                    <li>(2) Weight int kilograms (kg)</li>
+                </ul><br>
+                <div class="content2">
+                    <div class="innerContent">
+                        <input type="number" name="height" id="height" placeholder="Input Height (cm)">
+                        <input type="number" name="weight" id="weight" placeholder="Input Weight (kg)">
+                        <button onclick="calculateBMI()">Calculate</button>
+                    </div>
+                    <div class="innerContent2">
+                        <p class="bmi">BMI</p>
+                        <div class="box2">
+                            <p id="BMI"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Smart Grocery Shopping</h1>
+
+    <div class="center">
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Quantity</th>
+                <th>Amount</th>
+                <th>Expiration Date (Days until expiry)</th>
+                <th>Buy Item</th>
+                <th>Discount</th>
+            </tr>
+
+            <tbody id="grocery"></tbody>
+        </table>
+    </div>
+    </div>
+    <div class="row">
+        <div class="box">
+            <h2>Add Item</h2>
+            <input type="text" id="itemInput" placeholder="Item" class="inputBox">
+            <input type="number" id="qtyInput" placeholder="Quantity" class="inputBox">
+            <input type="number" id="amount" placeholder="Amount" class="inputBox">
+            <input type="number" id="expInput" placeholder="Expiration (days)" class="inputBox">
+            <button id="submit">Add Item</button>
+        </div>
+        <div class="box">
+            <h2>Shopping List</h2>
+            <div class="center">
+                <table class="shopList">
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                    </tr>
+                    <tbody id="shopList"></tbody>
+                    <tbody id="total"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="popUpModel" class="modal">
+        <div class="modal-content">
+            <h1>Discounted Item!</h1>
+            <table class="discountTable">
+                <tr>
+                    <th>Item</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                    <th>Expiration Date (Days until expiry)</th>
+                    <th>Buy Item</th>
+                </tr>
+                <tr>
+                    <tbody id="discount"></tbody>
+                </tr>
+            </table>
+            <button onclick="closePopUp()">Close</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
