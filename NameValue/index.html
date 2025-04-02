@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Name Character Value Calculator</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-blue-100 font-mono">
+    <div class="flex items-center justify-center h-screen space-x-4">
+        <div class="w-170 h-89 p-12 bg-slate-500 text-white rounded-lg shadow-lg">
+            <div class="text-center mb-15">
+                <h1 class="text-6xl ">Name Calculator</h1>
+                <h1 class="text-2xl dark:text-sky-200/75 mt-0.5 ">To make it easier during networking</h1>
+            </div>
+            <form class="flex flex-col items-center" onsubmit="event.preventDefault(); calculate(document.getElementById('name').value);">
+                <input type="text" id="name" placeholder="Name here" class="p-2 w-70 text-2xl rounded border border-gray-300 hover:border-none focus:outline-none mb-2">
+                <button type="submit" class="rounded border p-2 w-70 text-2xl focus:outline-none border-gray-300 hover:border-none">Submit</button>
+            </form>
+        </div>
+        <div id="hiddenCard " class="w-80 h-89 p-4 bg-slate-500 text-white rounded-lg shadow-lg hidden ">
+            <div class="text-center mb-15 p-8 ">
+                <h1 class="text-6xl ">Value</h1>
+                <div id="value " class="text-9xl mt-17 dark:text-sky-200/75 "></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculate(name) {
+            if (!name || name.trim() === " ") {
+                alert("Please enter a valid name! ");
+                return;
+            }
+            let sum = 0;
+            for (let i = 0; i < name.length; i++) {
+                sum += name[i].toLowerCase().charCodeAt(0) - 96;
+            }
+            showCard(sum);
+        }
+
+        function showCard(sum) {
+            const card = document.getElementById("hiddenCard ");
+            document.getElementById("value ").innerHTML = sum;
+            if (card.classList.contains('hidden')) {
+                card.classList.toggle('hidden');
+            }
+        }
+    </script>
+</body>
+
+</html>
